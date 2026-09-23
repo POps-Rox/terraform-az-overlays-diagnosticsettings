@@ -60,6 +60,7 @@ resource "azurerm_log_analytics_workspace" "diagnostic-settings-log" {
 }
 
 resource "azurerm_key_vault" "diagnostic-settings-kv" {
+  rbac_authorization_enabled = true
   depends_on = [
     azurerm_resource_group.diagnostic-settings-network-rg
   ]
