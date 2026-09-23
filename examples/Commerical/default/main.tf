@@ -11,6 +11,7 @@ module "mod_diagnostic_settings" {
   deploy_environment = var.deploy_environment
   environment        = var.environment
   org_name           = var.org_name
+  workload_name      = var.workload_name
 
   resource_id           = azurerm_key_vault.diagnostic-settings-kv.id
   logs_destinations_ids = [azurerm_log_analytics_workspace.diagnostic-settings-log.id]
